@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Comments Tool</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="title-block">
+    <h1>Remove Comments</h1>
+    <p>Clean your HTML, CSS, and JavaScript code instantly.</p>
+  </div>
+  <main>
+    <div class="panel">
+      <h2>Input Code</h2>
+      <div class="code-area">
+        <textarea id="input" placeholder="Paste your HTML, CSS, or JS code here..."></textarea>
+      </div>
+      <button id="removeBtn">
+        Remove Comments
+      </button>
+    </div>
+
+    <div class="panel">
+      <h2>Clean Code</h2>
+      <div class="code-area">
+        <div id="outputContainer" class="output-code">
+          <pre id="outputContent">Clean code will appear here...</pre>
+        </div>
+      </div>
+      <div class="output-actions">
+        <button id="copyBtn" class="copy-btn">
+          <span id="copyText">Copy Code</span>
+        </button>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
