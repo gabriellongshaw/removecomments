@@ -1,0 +1,25 @@
+.site-header {
+  padding: 20px 16px 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+
+.tagline {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 400;
+}

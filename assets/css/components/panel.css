@@ -1,0 +1,80 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  background: var(--panel-bg);
+  transition: background-color var(--transition), border-color var(--transition);
+  gap: 14px;
+}
+
+.panel-output {
+  background: var(--code-bg);
+}
+
+.panel-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.code-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.code-area textarea,
+.code-area .output-code {
+  flex: 1;
+  width: 100%;
+  min-height: 220px;
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  background: var(--code-bg);
+  color: var(--fg-subtle);
+  outline: none;
+  resize: none;
+  transition: border-color var(--transition);
+  overflow: auto;
+}
+
+.code-area textarea:focus {
+  border-color: var(--fg);
+}
+
+.code-area textarea::placeholder {
+  color: var(--muted);
+}
+
+.code-area .output-code {
+  padding: 0;
+  cursor: default;
+  background: var(--bg);
+}
+
+.code-area .output-code pre {
+  margin: 0;
+  padding: 16px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--muted);
+}
+
+.code-area .output-code pre.has-output {
+  color: var(--fg-subtle);
+}
+
+.output-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}

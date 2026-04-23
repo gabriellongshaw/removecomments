@@ -3,40 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Remove Comments Tool</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css">
+<title>Remove Comments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components/header.css">
+<link rel="stylesheet" href="assets/css/components/panel.css">
+<link rel="stylesheet" href="assets/css/components/buttons.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-  <div class="title-block">
-    <h1>Remove Comments</h1>
-    <p>Clean your HTML, CSS, and JavaScript code instantly.</p>
-  </div>
-  <main>
-    <div class="panel">
-      <h2>Input Code</h2>
-      <div class="code-area">
-        <textarea id="input" placeholder="Paste your HTML, CSS, or JS code here..."></textarea>
-      </div>
-      <button id="removeBtn">
-        Remove Comments
-      </button>
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="logo">Remove Comments</span>
+      <p class="tagline">Strip comments from HTML, CSS &amp; JS — instantly.</p>
     </div>
-
-    <div class="panel">
-      <h2>Clean Code</h2>
+  </header>
+  <main>
+    <div class="panel panel-input">
+      <div class="panel-label">01 — Input</div>
+      <div class="code-area">
+        <textarea id="input" spellcheck="false" placeholder="Paste your code here..."></textarea>
+      </div>
+      <button id="removeBtn" class="button primary-button">Remove Comments</button>
+    </div>
+    <div class="panel panel-output">
+      <div class="panel-label">02 — Output</div>
       <div class="code-area">
         <div id="outputContainer" class="output-code">
           <pre id="outputContent">Clean code will appear here...</pre>
         </div>
       </div>
       <div class="output-actions">
-        <button id="copyBtn" class="copy-btn">
+        <button id="copyBtn" class="button copy-button">
           <span id="copyText">Copy Code</span>
         </button>
       </div>
     </div>
   </main>
-  <script src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
