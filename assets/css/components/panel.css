@@ -29,7 +29,7 @@
   border: 1px solid var(--code-border);
   border-radius: var(--radius);
   background: var(--code-bg);
-  overflow: hidden; 
+  overflow: hidden;
   transition: border-color var(--transition);
 }
 
@@ -63,6 +63,8 @@
   padding: 0;
   cursor: default;
   background: var(--bg);
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .code-area .output-code pre {
