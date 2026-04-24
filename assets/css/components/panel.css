@@ -26,6 +26,17 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
+  /* The "Fix": Container holds the decoration and clips the children */
+  border: 1px solid var(--code-border);
+  border-radius: var(--radius);
+  background: var(--code-bg);
+  overflow: hidden; 
+  transition: border-color var(--transition);
+}
+
+/* Highlighting the border when the internal textarea is focused */
+.code-area:focus-within {
+  border-color: var(--fg);
 }
 
 .code-area textarea,
@@ -33,22 +44,18 @@
   flex: 1;
   width: 100%;
   min-height: 220px;
-  border: 1px solid var(--code-border);
-  border-radius: var(--radius);
+  /* Remove borders and radius here to avoid double-borders or clipping issues */
+  border: none;
+  border-radius: 0;
   padding: 16px;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.8rem;
   line-height: 1.7;
-  background: var(--code-bg);
+  background: transparent;
   color: var(--fg-subtle);
   outline: none;
   resize: none;
-  transition: border-color var(--transition);
   overflow: auto;
-}
-
-.code-area textarea:focus {
-  border-color: var(--fg);
 }
 
 .code-area textarea::placeholder {
@@ -58,6 +65,7 @@
 .code-area .output-code {
   padding: 0;
   cursor: default;
+  /* Maintain the internal background if specific to output */
   background: var(--bg);
 }
 
