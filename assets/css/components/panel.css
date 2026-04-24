@@ -41,7 +41,7 @@
 .code-area .output-code {
   flex: 1;
   width: 100%;
-  height: 220px;
+  min-height: 300px;
   border: none;
   border-radius: 0;
   padding: 16px;
@@ -60,6 +60,7 @@
 }
 
 .code-area .output-code {
+  max-height: 300px;
   padding: 0;
   cursor: default;
   background: var(--bg);
