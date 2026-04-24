@@ -1,3 +1,10 @@
+@keyframes copy-bounce {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.88); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
 .button {
   border: none;
   border-radius: var(--radius);
@@ -34,7 +41,7 @@
   border: 1px solid var(--panel-border);
   padding: 8px 16px;
   font-size: 0.8rem;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .copy-button:hover {
@@ -45,4 +52,5 @@
   background: var(--success);
   color: var(--success-text);
   border-color: var(--success);
+  animation: copy-bounce 0.35s ease forwards;
 }
