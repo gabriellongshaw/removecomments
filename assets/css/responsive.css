@@ -15,6 +15,6 @@
   }
   .code-area textarea,
   .code-area .output-code {
-    min-height: 360px;
+    height: 360px;
   }
 }
