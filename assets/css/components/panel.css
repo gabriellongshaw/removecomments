@@ -26,7 +26,6 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
-  /* The "Fix": Container holds the decoration and clips the children */
   border: 1px solid var(--code-border);
   border-radius: var(--radius);
   background: var(--code-bg);
@@ -34,7 +33,6 @@
   transition: border-color var(--transition);
 }
 
-/* Highlighting the border when the internal textarea is focused */
 .code-area:focus-within {
   border-color: var(--fg);
 }
@@ -44,7 +42,6 @@
   flex: 1;
   width: 100%;
   min-height: 220px;
-  /* Remove borders and radius here to avoid double-borders or clipping issues */
   border: none;
   border-radius: 0;
   padding: 16px;
@@ -65,7 +62,6 @@
 .code-area .output-code {
   padding: 0;
   cursor: default;
-  /* Maintain the internal background if specific to output */
   background: var(--bg);
 }
 
